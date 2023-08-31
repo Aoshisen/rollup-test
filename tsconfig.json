@@ -1,0 +1,13 @@
+{
+  "include": ["src/"],
+  "compilerOptions": {
+    "target": "ES6",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom"]
+  }
+}
