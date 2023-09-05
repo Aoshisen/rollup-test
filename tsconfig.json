@@ -1,22 +1,7 @@
 {
-  "include": [
-    "src"
-  ],
+  "include": ["./src"],
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": ["node"],
-    "esModuleInterop": true
+    //解析json模块
+    "resolveJsonModule": true
   }
 }
