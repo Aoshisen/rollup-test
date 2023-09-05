@@ -12,10 +12,9 @@ function bundleCss() {
   const __dirnameNew = path.dirname(fileURLToPath(import.meta.url));
   let cssConfigs = [];
   const files = glob.sync(path.resolve(__dirnameNew, "./src/styles/*.scss"));
-  files.map((file) => {
-    var filename = file
-      .substr(file.lastIndexOf("/") + 1, file.length)
-      .toLowerCase();
+  files.forEach((file) => {
+    const reg = new RegExp(/\w+.scss/, "g");
+    const filename = file.match(reg)[0];
     cssConfigs.push(
       postcss({
         include: file,
@@ -27,6 +26,7 @@ function bundleCss() {
   });
   return cssConfigs;
 }
+
 export default defineConfig([
   {
     input: "src/index.ts",
